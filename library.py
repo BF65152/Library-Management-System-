@@ -14,4 +14,7 @@ class Library:
         borrow = [user_id, book_isbn]
         return borrow
 
+    def return_book(self, user_id, book_isbn):
+        return_ = [user_id, book_isbn]
+        return return_
 
