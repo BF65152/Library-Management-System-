@@ -1,0 +1,18 @@
+Index: library.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class Library:\r\n    def __init__(self, list_of_books, list_of_users):\r\n        self.list_of_books = []\r\n        self.list_of_users = list_of_users\r\n\r\n    def add_book(self, book):\r\n        pass\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/library.py b/library.py
+--- a/library.py	(revision a864a1152a255a901a7ace7d06202105e31ecbc9)
++++ b/library.py	(date 1762780659661)
+@@ -6,6 +6,6 @@
+     def add_book(self, book):
+         pass
+ 
+-
++print("good")
+ 
+ 

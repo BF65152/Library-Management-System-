@@ -1,0 +1,30 @@
+Index: classes.py
+===================================================================
+diff --git a/classes.py b/classes.py
+deleted file mode 100644
+--- a/classes.py	(revision 299a6a7ac0b59e5af68bb1f56892d801c85d5f37)
++++ /dev/null	(revision 299a6a7ac0b59e5af68bb1f56892d801c85d5f37)
+@@ -1,9 +0,0 @@
+-class Book:
+-    def __init__(self,title,author,isbn,is_available):
+-        self.title = title
+-        self.author = author
+-        self.isbn = isbn
+-        self.is_available = is_available
+-
+-    def maybe__str__(self):
+-        print(f"the book: {self.title},id {self.isbn}, his author: {self.author}, is available? {self.is_available}")
+\ No newline at end of file
+Index: user.py
+===================================================================
+diff --git a/user.py b/user.py
+new file mode 100644
+--- /dev/null	(date 1762779133921)
++++ b/user.py	(date 1762779133921)
+@@ -0,0 +1,6 @@
++
++class User:
++    def __init__(self,name,id, borrowed_books: Book):
++        self.name = name
++        self.id = id
++        self.borrowed_books = borrowed_books
