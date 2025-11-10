@@ -6,4 +6,4 @@ class Book:
         self.is_available = is_available
 
     def maybe__str__(self):
-        print(f"the book: {self.title},id {self.isbn}, his author: {self.author}, is available? {self.is_available}")
+        print(f"the book: {self.title},id: {self.isbn}, his author: {self.author}, is available? {self.is_available}")
