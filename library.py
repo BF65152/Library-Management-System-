@@ -12,12 +12,20 @@ class Library:
         return
 
     def borrow_book(self, user_id, book_isbn):
-        borrow = [user_id, book_isbn]
-        return borrow
+        for book in self.list_of_books:
+            if book.ISBN == book_isbn:
+                book.is_available = False
+                for user in self.list_of_users:
+                    if user.id == user_id:
+                        user.borrowed_books.append(book)
+
 
     def return_book(self, user_id, book_isbn):
         return_ = [user_id, book_isbn]
         return return_
 
     def list_available_books(self):
-        available_books = []
+        pass
+
+    def search_book(self, title):
+        pass
