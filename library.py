@@ -18,3 +18,5 @@ class Library:
         return_ = [user_id, book_isbn]
         return return_
 
+    def list_available_books(self):
+        available_books = []
