@@ -6,6 +6,9 @@ class Library:
     def add_book(self, book):
         pass
 
+    def add_user(self, user):
+        self.list_of_users.append(user)
+        return
 
 
 
