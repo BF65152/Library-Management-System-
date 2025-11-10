@@ -26,12 +26,14 @@ class Library:
             if return_book[1] == book:
                 book.is_available = True
                 user.borrowed_books.pop(book_isbn)
-                pass
 
 
 
     def list_available_books(self):
-        pass
+        for book in self.list_of_books:
+            if book.is_available
+
+
 
     def search_book(self, title):
         pass
