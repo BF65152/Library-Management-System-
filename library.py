@@ -1,5 +1,5 @@
 class Library:
-    def __init__(self, list_of_books, list_of_users):
+    def __init__(self):
         self.list_of_books = []
         self.list_of_users = []
 
@@ -13,16 +13,22 @@ class Library:
 
     def borrow_book(self, user_id, book_isbn):
         for book in self.list_of_books:
-            if book.ISBN == book_isbn:
+            if book.isbn == book_isbn:
                 book.is_available = False
                 for user in self.list_of_users:
                     if user.id == user_id:
                         user.borrowed_books.append(book)
-
+                        return
 
     def return_book(self, user_id, book_isbn):
-        return_ = [user_id, book_isbn]
-        return return_
+        return_book = [user_id, book_isbn]
+        for book in self.list_of_books:
+            if return_book[1] == book:
+                book.is_available = True
+                user.borrowed_books.pop(book_isbn)
+                pass
+
+
 
     def list_available_books(self):
         pass
