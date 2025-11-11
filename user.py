@@ -1,4 +1,3 @@
-from book import Book
 
 class User:
     def __init__(self,name,id):
