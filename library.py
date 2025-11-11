@@ -23,7 +23,6 @@ class Library:
         for user in self.list_of_users:
             if user.id == user_id:
                 return user
-        print("the user is not exist")
         return False
 
 
@@ -35,16 +34,21 @@ class Library:
                 print("your borrowed the book successfully")
                 user.borrowed_books.append(book_isbn)
                 book.is_available = False
-            print("the book is not exist")
+
 
 
 #החזרת ספר עי בדיקה האם הושאל בכלל
     def return_book(self, user_id, book_isbn):
+        user = self.find_user_by_id(user_id)
         for book in self.list_of_books:
-                if book.is_available:
-                    print("the book is not borrowed")
-                book.is_available = True
-                user_id.borrowed_books.remove(book_isbn)
+            if book.is_available and book_isbn == book.isbn:
+                print("the book is not borrowed")
+            book.is_available = True
+
+            #מסיר את הספר שהוחזר מהרשימה של הספרים המושאלים
+            for u in user.borrowed_books:
+                if u == book_isbn:
+                    user.borrowed_books.remove(u)
 
 
 #רשימה של ספרים שלא הושאלו
@@ -52,7 +56,8 @@ class Library:
         for book in self.list_of_books:
             if book.is_available:
                 self.list_of_available_books.append(book)
-        return self.list_of_available_books
+        for j in self.list_of_available_books:
+            print(j.__dict__)
 
 
     def search_book(self, title):
@@ -61,11 +66,4 @@ class Library:
                 print("the book exist")
             print("the book is not exist")
 
-
-b1 = Book("pop","moshe",11,True)
-b2 = Book("sps","david",12,True)
-u1 = User("chaim",123456)
-
-library = Library()
-library.add_book(b1)
 
