@@ -1,0 +1,46 @@
+Index: book.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class Book:\r\n    def __init__(self,title,author,isbn,is_available):\r\n        self.title = title\r\n        self.author = author\r\n        self.isbn = isbn\r\n        self.is_available = is_available\r\n\r\n    def maybe__str__(self):\r\n        print(f\"the book: {self.title},id {self.isbn}, his author: {self.author}, is available? {self.is_available}\")
+===================================================================
+diff --git a/book.py b/book.py
+--- a/book.py	(revision 299a6a7ac0b59e5af68bb1f56892d801c85d5f37)
++++ b/book.py	(date 1762779283483)
+@@ -6,4 +6,7 @@
+         self.is_available = is_available
+ 
+     def maybe__str__(self):
+-        print(f"the book: {self.title},id {self.isbn}, his author: {self.author}, is available? {self.is_available}")
+\ No newline at end of file
++        print(f"the book: {self.title},id {self.isbn}, his author: {self.author}, is available? {self.is_available}")
++
++b1 = Book("book","chaim",1111,True)
++b1.maybe__str__()
+\ No newline at end of file
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># This is a sample Python script.\r\n\r\n# Press Shift+F10 to execute it or replace it with your code.\r\n# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.\r\n\r\n\r\ndef print_hi(name):\r\n    # Use a breakpoint in the code line below to debug your script.\r\n    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.\r\n\r\n\r\n# Press the green button in the gutter to run the script.\r\nif __name__ == '__main__':\r\n    print_hi('PyCharm')\r\n\r\n# See PyCharm help at https://www.jetbrains.com/help/pycharm/\r\n
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 299a6a7ac0b59e5af68bb1f56892d801c85d5f37)
++++ b/main.py	(date 1762779283428)
+@@ -1,16 +1,1 @@
+-# This is a sample Python script.
+-
+-# Press Shift+F10 to execute it or replace it with your code.
+-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+-
+-
+-def print_hi(name):
+-    # Use a breakpoint in the code line below to debug your script.
+-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+-
+-
+-# Press the green button in the gutter to run the script.
+-if __name__ == '__main__':
+-    print_hi('PyCharm')
+-
+-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
++pp
+\ No newline at end of file
