@@ -8,12 +8,12 @@ class Library:
         self.list_of_users = []
         self.list_of_available_books = []
 
-
+#מוסיף ספר לרשימה
     def add_book(self,book):
         self.list_of_books.append(book)
         return
 
-
+#מוסיף יוזר לרשימה
     def add_user(self, user):
         self.list_of_users.append(user)
         return
@@ -27,7 +27,7 @@ class Library:
         return False
 
 
-#אחרי שמוצאים את המשתמש בודקים עם הספר קיים ואז משאילים
+#אחרי שמוצאים את המשתמש בודקים אם הספר קיים ואז משאילים
     def borrow_book(self,book_isbn,user_id):
         user = self.find_user_by_id(user_id)
         if not user:
